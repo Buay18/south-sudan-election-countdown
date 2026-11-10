@@ -1,0 +1,240 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>South Sudan National Election Countdown</title>
+<style>
+:root{--bg:#fff;--bg2:#f4f1f1;--ink:#1a1214;--mute:#6b5f62;--red:#a4121f;--red2:#6e0b14;--tile:#fff;--num:#a4121f;--line:#e3d9da;--panel:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=dark]{--bg:#1c0a0d;--bg2:#2a0d12;--ink:#fff;--mute:#d9c3c6;--tile:linear-gradient(160deg,#b3162a,#6e0b14);--num:#fff;--line:#5a1a22;--panel:#2a1014}
+*,*:before,*:after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background .4s,color .4s;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(1200px 600px at 20% -10%,color-mix(in srgb,var(--red) 14%,transparent),transparent 60%),repeating-linear-gradient(135deg,transparent 0 46px,color-mix(in srgb,var(--red) 4%,transparent) 46px 48px)}
+.bar{height:8px;background:linear-gradient(90deg,#000 0 33%,#fff 33% 34%,#a4121f 34% 66%,#fff 66% 67%,#078930 67%)}
+.app{display:grid;grid-template-columns:1fr;gap:24px;padding:24px;max-width:2200px;margin:0 auto;position:relative}
+@media(min-width:1100px){.app{grid-template-columns:minmax(0,1fr) 380px;align-items:start;padding:32px 40px}body.noadmin .app,body.pres .app{grid-template-columns:1fr}}
+main{container-type:inline-size;text-align:center;display:flex;flex-direction:column;align-items:center;gap:clamp(10px,2cqw,26px)}
+.hd{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(12px,2.5cqw,48px)}
+.hdtxt{display:flex;flex-direction:column;align-items:center;gap:clamp(6px,1.2cqw,18px);min-width:0}
+.flag,.emblem{height:var(--ph);width:auto;display:block;object-fit:contain}
+main{--ph:clamp(70px,10cqw,200px)}
+.flag{aspect-ratio:2/1;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.emblem{aspect-ratio:1/1;background:#fff;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+@media(max-width:700px){.hd{grid-template-columns:1fr 1fr;justify-items:start}.hd .flag{grid-row:1;grid-column:1}.hd .emblem{grid-row:1;grid-column:2;justify-self:end}.hdtxt{grid-row:2;grid-column:1/-1}main{--ph:clamp(60px,18cqw,110px)}}
+.country{letter-spacing:.35em;font-weight:600;color:var(--mute);font-size:clamp(.8rem,1.6cqw,1.5rem);margin:0}
+h1{margin:0;font-size:clamp(1.6rem,5.4cqw,5.5rem);line-height:1.05;font-weight:800;letter-spacing:.02em;color:var(--red)}
+[data-theme=dark] h1{color:#fff}
+.sub{margin:0;color:var(--mute);font-size:clamp(.9rem,1.7cqw,1.6rem);font-style:italic}
+.date{margin:0;font-weight:700;font-size:clamp(1rem,2cqw,1.9rem)}
+.date b{color:var(--red)}[data-theme=dark] .date b{color:#ff9aa5}
+.panelred{width:100%;padding:clamp(14px,3cqw,48px);border-radius:24px;background:linear-gradient(145deg,color-mix(in srgb,var(--red) 10%,var(--bg)),var(--bg2));border:1px solid var(--line);box-shadow:0 20px 60px rgba(110,11,20,.15)}
+.units{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:clamp(8px,1.6cqw,28px)}
+@media(max-width:600px){.units{grid-template-columns:1fr 1fr}}
+.u{background:var(--tile);border:1px solid var(--line);border-radius:18px;padding:clamp(10px,2cqw,36px) 6px;box-shadow:0 8px 22px rgba(0,0,0,.14);min-width:0}
+.n{display:block;font-weight:900;font-variant-numeric:tabular-nums;line-height:1;color:var(--num);font-size:clamp(2.6rem,12cqw,15rem)}
+@media(max-width:600px){.n{font-size:clamp(2.6rem,22cqw,8rem)}}
+.n.tick{animation:t .35s ease-out}
+@keyframes t{from{opacity:.25;transform:translateY(-8%)}to{opacity:1;transform:none}}
+.l{display:block;margin-top:clamp(6px,1cqw,16px);letter-spacing:.22em;font-weight:700;font-size:clamp(.7rem,1.6cqw,1.7rem);color:var(--mute)}
+[data-theme=dark] .l{color:#ffd9de}
+.msg{font-size:clamp(1.4rem,5cqw,5rem);font-weight:900;color:var(--num);padding:clamp(18px,4cqw,60px) 10px;background:var(--tile);border-radius:18px;border:1px solid var(--line)}
+.clock{display:flex;gap:clamp(12px,3cqw,40px);flex-wrap:wrap;justify-content:center;color:var(--mute);font-size:clamp(.85rem,1.8cqw,1.8rem)}
+.clock strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--red);color:#fff;font-size:.75em;font-weight:700;margin-left:6px}
+.badge[hidden]{display:none}
+footer{font-size:clamp(.7rem,1.2cqw,1.1rem);color:var(--mute);margin-top:6px}
+aside{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 14px 40px rgba(0,0,0,.12)}
+body.noadmin aside,body.pres aside,aside[hidden]{display:none}
+aside h2{margin:0 0 4px;font-size:1.15rem;color:var(--red)}[data-theme=dark] aside h2{color:#ff9aa5}
+aside h3{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin:20px 0 8px;color:var(--mute)}
+aside p.note{font-size:.8rem;color:var(--mute);margin:6px 0}
+label{display:block;font-size:.85rem;margin:8px 0 3px}
+input[type=date],input[type=time],input[type=password]{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);min-height:44px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{font:inherit;min-height:44px;padding:10px 14px;border-radius:10px;border:1px solid var(--red);background:var(--red);color:#fff;font-weight:700;cursor:pointer;margin-top:10px;width:100%}
+button.ghost{background:transparent;color:var(--red)}[data-theme=dark] button.ghost{color:#ff9aa5;border-color:#ff9aa5}
+button:hover{filter:brightness(1.1)}
+:focus-visible{outline:3px solid #f5b800;outline-offset:2px}
+.tg{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;font-size:.92rem}
+.tg input{width:22px;height:22px;accent-color:#a4121f}
+#status{min-height:1.3em;margin-top:10px;font-size:.85rem;font-weight:600}
+.ok{color:#0a7a2f}.err{color:#d11a2a}[data-theme=dark] .ok{color:#6ee79a}[data-theme=dark] .err{color:#ff8a94}
+#adminBtn{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:auto;min-height:36px;padding:6px 12px;font-size:.78rem;background:transparent;color:var(--mute);border-color:var(--line);opacity:.55;margin:0}
+#adminBtn:hover,#adminBtn:focus{opacity:1}
+body.pres #adminBtn{display:none}
+#exitBtn{display:none;position:fixed;right:16px;top:calc(16px + env(safe-area-inset-top,0px));width:auto;opacity:.25;margin:0}
+#exitBtn:hover,#exitBtn:focus{opacity:1}
+body.pres #exitBtn{display:block}
+body.pres .app{min-height:100vh;align-items:center;padding:3vh 3vw}
+body.pres main{width:100%}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);max-width:380px;width:92%;padding:22px}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+</style>
+</head>
+<body class="noadmin">
+<div class="bar"></div>
+<div class="app">
+<main aria-live="off">
+<header class="hd">
+<img class="flag" src="flag.jpeg" alt="Flag of South Sudan" width="1600" height="800">
+<div class="hdtxt">
+<p class="country">REPUBLIC OF SOUTH SUDAN</p>
+<h1>NATIONAL ELECTION COUNTDOWN</h1>
+<p class="date">Scheduled Election Date: <b id="elLabel">22 December 2026</b></p>
+<p class="sub">“Countdown to the Scheduled National Elections”</p>
+</div>
+<img class="emblem" src="emblem.png" alt="SPLM emblem" width="512" height="512">
+</header>
+<div class="panelred" id="cd" role="timer" aria-label="Time remaining until the scheduled election date"></div>
+<div class="clock" id="clock"><span>Current date: <strong id="cDate"></strong></span><span>Africa/Juba time: <strong id="cTime"></strong><span class="badge" id="refBadge" hidden>REFERENCE CLOCK</span></span></div>
+<footer>An informational countdown display | Dates may be updated when officially revised.</footer>
+</main>
+
+<aside id="panel" aria-label="Administrator settings" hidden>
+<h2>Administrator Settings</h2>
+<p class="note">Changes apply instantly. Press “Save Settings” to keep them on this browser.</p>
+
+<h3>Current date &amp; time</h3>
+<p class="note"><b>Live clock:</b> the real Africa/Juba system time (default). <b>Reference clock:</b> an adjustable time, set here for testing or manual correction, that keeps ticking from the value you set.</p>
+<div class="row"><div><label for="refD">Date</label><input type="date" id="refD"></div><div><label for="refT">Time</label><input type="time" id="refT" step="1"></div></div>
+<button id="setRef">Set Current Date &amp; Time</button>
+<button id="live" class="ghost">Return to Live Clock</button>
+
+<h3>Election date &amp; time</h3>
+<div class="row"><div><label for="elD">Date</label><input type="date" id="elD"></div><div><label for="elT">Time (Juba)</label><input type="time" id="elT"></div></div>
+<button id="setEl">Update Election Date</button>
+
+<h3>Display</h3>
+<label class="tg">Show seconds <input type="checkbox" id="tSec"></label>
+<label class="tg">Show current date &amp; clock <input type="checkbox" id="tClk"></label>
+<label class="tg">Dark red theme <input type="checkbox" id="tTheme"></label>
+<label class="tg">Show administration panel <input type="checkbox" id="tPanel" checked></label>
+<button id="present" class="ghost">Start Full-Screen Presentation</button>
+
+<h3>General</h3>
+<button id="save">Save Settings</button>
+<button id="reset" class="ghost">Reset to Default</button>
+<button id="lock" class="ghost">Lock &amp; Close Admin</button>
+<div id="status" role="status"></div>
+</aside>
+</div>
+
+<button id="adminBtn">Admin Settings</button>
+<button id="exitBtn" class="ghost">Exit Presentation</button>
+
+<dialog id="dlg"><form method="dialog" id="authForm">
+<h2 id="dTitle" style="margin-top:0">Administrator access</h2>
+<p class="note" id="dNote"></p>
+<label for="pw">Password</label><input type="password" id="pw" autocomplete="current-password">
+<div id="pw2w" hidden><label for="pw2">Confirm password</label><input type="password" id="pw2" autocomplete="new-password"></div>
+<div id="dErr" class="err" style="min-height:1.3em;margin-top:6px"></div>
+<button id="dOk" value="ok">Continue</button><button type="button" class="ghost" id="dCancel">Cancel</button>
+</form></dialog>
+
+<script>
+(function(){
+"use strict";
+var OFF="+02:00",TZ="Africa/Juba",KEY="ss-countdown-settings",AUTH="ss-countdown-admin";
+var DEF={elD:"2026-12-22",elT:"00:00",refOff:null,sec:true,clk:true,theme:null};
+var S=load();
+function $(i){return document.getElementById(i)}
+function store(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}
+function fetchLS(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function load(){var s=Object.assign({},DEF);try{var j=JSON.parse(fetchLS(KEY)||"null");if(j)Object.assign(s,j)}catch(e){}
+if(!s.theme)s.theme=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";return s}
+function nowMs(){return Date.now()+(S.refOff||0)}
+function target(){return Date.parse(S.elD+"T"+S.elT+":00"+OFF)}
+function jParts(ms){var p=new Date(ms).toLocaleString("sv-SE",{timeZone:TZ,hour12:false}).split(" ");return{d:p[0],t:p[1]}}
+function pad(n,l){return String(n).padStart(l,"0")}
+var dF=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,weekday:"long",day:"numeric",month:"long",year:"numeric"});
+var tF=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false});
+var elF=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,day:"numeric",month:"long",year:"numeric"});
+var units=[["d","DAYS"],["h","HOURS"],["m","MINUTES"],["s","SECONDS"]],els={},mode="";
+function build(m){
+ var c=$("cd");mode=m;c.innerHTML="";
+ if(m!=="run"){var d=document.createElement("div");d.className="msg";d.id="msgBox";c.appendChild(d);return}
+ var g=document.createElement("div");g.className="units";g.id="units";
+ units.forEach(function(u){var w=document.createElement("div");w.className="u";w.id="w"+u[0];
+  var n=document.createElement("span");n.className="n";n.id="n"+u[0];n.textContent="--";
+  var l=document.createElement("span");l.className="l";l.textContent=u[1];w.appendChild(n);w.appendChild(l);g.appendChild(w);els[u[0]]=n});
+ c.appendChild(g)}
+function setN(k,v){var e=els[k];if(e&&e.textContent!==v){e.textContent=v;e.classList.remove("tick");void e.offsetWidth;e.classList.add("tick")}}
+function render(){
+ var now=nowMs(),tg=target(),diff=tg-now;
+ $("elLabel").textContent=isNaN(tg)?"—":elF.format(tg)+(S.elT!=="00:00"?", "+S.elT:"");
+ $("cDate").textContent=dF.format(now);$("cTime").textContent=tF.format(now);
+ $("refBadge").hidden=S.refOff===null;
+ if(isNaN(tg)){if(mode!=="msg")build("msg");$("msgBox").textContent="ELECTION DATE NOT SET";return}
+ if(diff>0){
+  if(mode!=="run")build("run");
+  var t=Math.floor(diff/1000);
+  setN("d",pad(Math.floor(t/86400),2));setN("h",pad(Math.floor(t%86400/3600),2));setN("m",pad(Math.floor(t%3600/60),2));setN("s",pad(t%60,2));
+  $("ws").style.display=S.sec?"":"none";$("units").style.setProperty("--n",S.sec?4:3);
+ }else{
+  if(mode!=="msg")build("msg");
+  $("msgBox").textContent=diff>-86400000?"THE SCHEDULED ELECTION DATE HAS ARRIVED":"THE SCHEDULED ELECTION DATE HAS PASSED";
+ }
+}
+function applyDisplay(){
+ document.documentElement.setAttribute("data-theme",S.theme);
+ $("clock").style.display=S.clk?"":"none";
+ $("tSec").checked=S.sec;$("tClk").checked=S.clk;$("tTheme").checked=S.theme==="dark";
+ render()}
+function fillForm(){var r=jParts(nowMs());$("refD").value=r.d;$("refT").value=r.t;$("elD").value=S.elD;$("elT").value=S.elT}
+function status(t,ok){var s=$("status");s.textContent=t;s.className=ok?"ok":"err"}
+function validDT(d,t,secs){return /^\d{4}-\d{2}-\d{2}$/.test(d)&&new RegExp(secs?"^\\d{2}:\\d{2}(:\\d{2})?$":"^\\d{2}:\\d{2}$").test(t)&&!isNaN(Date.parse(d+"T"+(t.length===5?t+":00":t)+OFF))&&Number(d.slice(0,4))>=2000&&Number(d.slice(0,4))<=2100}
+
+/* admin actions */
+$("setRef").onclick=function(){var d=$("refD").value,t=$("refT").value;
+ if(!validDT(d,t,true))return status("Enter a valid current date and time.",false);
+ if(t.length===5)t+=":00";
+ S.refOff=Date.parse(d+"T"+t+OFF)-Date.now();render();status("Reference clock set (unsaved). The countdown is using it.",true)};
+$("live").onclick=function(){S.refOff=null;fillForm();render();status("Using the real live Africa/Juba clock.",true)};
+$("setEl").onclick=function(){var d=$("elD").value,t=$("elT").value;
+ if(!validDT(d,t,false))return status("Enter a valid election date and time.",false);
+ S.elD=d;S.elT=t;render();status("Election date updated (not yet saved).",true)};
+$("tSec").onchange=function(){S.sec=this.checked;applyDisplay()};
+$("tClk").onchange=function(){S.clk=this.checked;applyDisplay()};
+$("tTheme").onchange=function(){S.theme=this.checked?"dark":"light";applyDisplay()};
+$("tPanel").onchange=function(){if(!this.checked){$("panel").hidden=true;document.body.classList.add("noadmin")}};
+$("save").onclick=function(){var ok=store(KEY,JSON.stringify(S));status(ok?"Settings saved on this browser.":"Could not save: browser storage is unavailable.",ok)};
+$("reset").onclick=function(){S=Object.assign({},DEF);S.theme=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+ try{localStorage.removeItem(KEY)}catch(e){}fillForm();applyDisplay();status("Reset to default: 22 December 2026, live clock.",true)};
+$("lock").onclick=function(){$("panel").hidden=true;document.body.classList.add("noadmin")};
+function setPres(on){document.body.classList.toggle("pres",on)}
+$("present").onclick=function(){setPres(true);var e=document.documentElement;if(e.requestFullscreen)e.requestFullscreen().catch(function(){})};
+$("exitBtn").onclick=function(){setPres(false);if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen()};
+document.addEventListener("fullscreenchange",function(){if(!document.fullscreenElement)setPres(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")setPres(false)});
+
+/* admin access: password hashed with PBKDF2 (Web Crypto); only a salted hash is stored, nothing is hardcoded */
+function b64(buf){return btoa(String.fromCharCode.apply(null,new Uint8Array(buf)))}
+function unb64(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})}
+function hash(pw,salt){return crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveBits"]).then(function(k){return crypto.subtle.deriveBits({name:"PBKDF2",salt:salt,iterations:200000,hash:"SHA-256"},k,256)}).then(b64)}
+function openPanel(){document.body.classList.remove("noadmin");$("panel").hidden=false;$("tPanel").checked=true;fillForm();$("panel").scrollIntoView({block:"nearest"})}
+function authState(){var a=null;try{a=JSON.parse(fetchLS(AUTH)||"null")}catch(e){}return a}
+$("adminBtn").onclick=function(){var a=authState();$("pw").value="";$("pw2").value="";$("dErr").textContent="";
+ $("pw2w").hidden=!!a;$("dTitle").textContent=a?"Administrator access":"Create administrator password";
+ $("dNote").textContent=a?"Enter the administrator password to change settings.":"No password exists on this browser yet. Choose one (at least 8 characters). It is stored only as a salted hash on this device.";
+ $("pw").autocomplete=a?"current-password":"new-password";
+ if(!window.crypto||!crypto.subtle){$("dErr").textContent="Secure password hashing needs an HTTPS page."}
+ $("dlg").showModal();$("pw").focus()};
+$("dCancel").onclick=function(){$("dlg").close()};
+$("authForm").onsubmit=function(e){e.preventDefault();var a=authState(),pw=$("pw").value;
+ if(!crypto||!crypto.subtle)return;
+ if(a){hash(pw,unb64(a.salt)).then(function(h){if(h===a.hash){$("dlg").close();openPanel()}else $("dErr").textContent="Incorrect password."})}
+ else{if(pw.length<8)return $("dErr").textContent="Use at least 8 characters.";
+  if(pw!==$("pw2").value)return $("dErr").textContent="Passwords do not match.";
+  var salt=crypto.getRandomValues(new Uint8Array(16));
+  hash(pw,salt).then(function(h){if(store(AUTH,JSON.stringify({salt:b64(salt),hash:h}))){$("dlg").close();openPanel()}else $("dErr").textContent="Browser storage is unavailable."})}};
+
+applyDisplay();fillForm();
+setInterval(render,250);
+})();
+</script>
+</body>
+</html>
+
+</body></html>
